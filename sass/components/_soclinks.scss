@@ -1,0 +1,17 @@
+.soc-link {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  @include transition(background-color);
+}
+
+.icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  @include transition(fill);
+}

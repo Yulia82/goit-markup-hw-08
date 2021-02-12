@@ -1,0 +1,281 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  pointer-events: auto;
+  @include transition(opacity);
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  overflow-y: scroll;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  padding: 40px 20px;
+
+  background-color: $main-background-color;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: scale(1);
+  @include transition(transform);
+
+  .backdrop.is-hidden & {
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width: 486px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+    max-width: 450px;
+    min-height: 609px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+}
+
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: $main-background-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.modal-svg {
+  @include transition(fill);
+
+  width: 11px;
+  height: 11px;
+
+  fill: inherit;
+
+  .modal-button:hover &,
+  .modal-button:focus & {
+    fill: $accent-color;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-modal {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  margin-top: 0px;
+  text-align: center;
+  @include fontcolor(20px, 700, 1.5, $second-color);
+  letter-spacing: 0.03em;
+}
+
+.field {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  & + & {
+    margin-top: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $accent-color;
+  }
+}
+
+.modal-form .input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  @include transition(border-color);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    border-color: $accent-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus + .input-svg {
+    fill: $accent-color;
+  }
+}
+
+.modal-form .input-icon {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.modal-form .input-svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include transition(fill);
+
+  width: 18px;
+  height: 18px;
+}
+
+.textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-top: 4px;
+  padding: 12px 16px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &::placeholder {
+    @include transition(font-size, line-height);
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.field-chek {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 20px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    background-image: url(../images/icon-rectangle.svg);
+    @include transition(background-image);
+
+    .input-check:checked + & {
+      background-image: url(../images/icon-check.svg);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link-chek {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+.button-modal {
+  min-width: 200px;
+  padding: 10px 55px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include fontcolor(16px, 700, 1.87, $add-text-color);
+  letter-spacing: 0.06em;
+
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .field:hover {
+    color: $main-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
+
+  .field-chek {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .title-modal {
+    line-height: 1.15;
+  }
+}

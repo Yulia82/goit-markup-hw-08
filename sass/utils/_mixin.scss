@@ -1,0 +1,12 @@
+@mixin transition($property...) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $cubic;
+}
+
+@mixin fontcolor($fsize, $fweight, $lheight, $txtcolor) {
+  font-weight: $fweight;
+  font-size: $fsize;
+  line-height: $lheight;
+  color: $txtcolor;
+}

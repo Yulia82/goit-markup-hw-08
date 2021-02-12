@@ -1,0 +1,5 @@
+.team-subtitle {
+  @include fontcolor(16px, 500, 1.19, $second-color);
+  margin-top: 30px;
+  text-align: center;
+}

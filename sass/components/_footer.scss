@@ -1,0 +1,362 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $second-background-color;
+
+  & .logo {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+
+    color: $add-text-color;
+  }
+}
+
+.postaddress {
+  margin-bottom: 8px;
+
+  text-align: center;
+  color: $add-text-color;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.6);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-link:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer-socnetwork {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & .subtitle {
+    margin-bottom: 20px;
+    // margin-top: 0px;
+
+    text-align: center;
+    color: $add-text-color;
+  }
+}
+
+.soc-link {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  @include transition(background-color);
+}
+
+.icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  @include transition(fill);
+}
+
+.list-socnetfooter {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.soc-link {
+  color: $main-background-color;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  & .icon {
+    fill: currentColor;
+  }
+}
+
+// .form-footer
+.form-footer .subtitle {
+  margin-bottom: 20px;
+
+  text-align: center;
+  color: $add-text-color;
+}
+
+.form-subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-footer {
+  display: inline-flex;
+  align-items: center;
+  min-width: 200px;
+  padding: 13px 28px;
+
+  @include fontcolor(
+    $button-fsize,
+    $add-fweight,
+    $button-lheight,
+    $add-text-color
+  );
+  letter-spacing: 0.06em;
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: $accent-color;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+
+    background-image: url(../images/icon-send.svg);
+  }
+}
+
+.iput-footer {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding-left: 16px;
+  margin-bottom: 20px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .foot-contact {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 60px;
+  }
+
+  .footer-socnetwork {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foot-contact {
+    justify-content: start;
+    padding-bottom: 0px;
+  }
+
+  .footer-socnetwork {
+    margin-left: 70px;
+  }
+
+  .postaddress {
+    margin-bottom: 9px;
+  }
+
+  .footer-link:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .form-footer {
+    margin-left: auto;
+    & .subtitle {
+      text-align: start;
+    }
+  }
+
+  .form-subscription {
+    flex-direction: row;
+  }
+
+  .iput-footer {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
+// ------------------------------------------
+// -------------------------
+// .footer {
+//   padding-top: 58px;
+//   padding-bottom: 62px;
+
+//   background-color: $second-background-color;
+
+//   & .logo {
+//     display: block;
+//     margin-bottom: 20px;
+
+//     color: $add-text-color;
+//   }
+
+//   & .link {
+//     display: block;
+//     margin-bottom: 9px;
+//   }
+// }
+
+// .footer-link {
+//   color: rgba(255, 255, 255, 0.6);
+//   @include transition(color);
+
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
+
+// .subtitle-footer {
+//   margin-bottom: 20px;
+//   margin-top: 0px;
+
+//   @include fontcolor($main-fsize, $add-fweight, 1.14, $add-text-color);
+//   text-transform: uppercase;
+// }
+
+// .postaddress {
+//   display: block;
+//   margin-bottom: 9px;
+
+//   color: $add-text-color;
+// }
+
+// .list-socnetfooter {
+//   display: flex;
+
+//   & .soc-link {
+//     color: $main-background-color;
+//     background-color: rgba(255, 255, 255, 0.1);
+
+//     &:hover,
+//     &:focus {
+//       background-color: $accent-color;
+//     }
+
+//     & .icon {
+//       fill: currentColor;
+//     }
+//   }
+// }
+
+// .flex-container {
+//   display: flex;
+//   align-items: baseline;
+
+//   & .flex-element:not(:last-child) {
+//     margin-right: 70px;
+//   }
+// }
+
+// .form-footer {
+//   margin-left: auto;
+// }
+
+// .flex-footer {
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+
+//   & .flex-element:not(:last-child) {
+//     margin-right: 12px;
+//   }
+// }
+
+// .button-footer {
+//   display: inline-flex;
+//   align-items: center;
+//   min-width: 200px;
+//   padding: 13px 28px;
+
+//   @include fontcolor(
+//     $button-fsize,
+//     $add-fweight,
+//     $button-lheight,
+//     $add-text-color
+//   );
+//   letter-spacing: 0.06em;
+
+//   border: none;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   border-radius: 4px;
+//   background-color: $accent-color;
+
+//   cursor: pointer;
+
+//   &::after {
+//     content: '';
+//     display: inline-block;
+//     width: 24px;
+//     height: 24px;
+//     margin-left: 10px;
+
+//     background-image: url(../images/icon-send.svg);
+//   }
+// }
+
+// .iput-footer {
+//   width: 358px;
+//   height: 50px;
+//   padding-left: 16px;
+
+//   background-color: transparent;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   border-radius: 4px;
+
+//   color: rgba(255, 255, 255, 0.6);
+
+//   cursor: pointer;
+
+//   &::placeholder {
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+// }
