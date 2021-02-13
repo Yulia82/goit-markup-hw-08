@@ -411,12 +411,6 @@ p {
   color: #000000;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1199px) {
-  .logo {
-    padding-right: 88px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .logo {
     padding-right: 93px;
@@ -659,11 +653,29 @@ p {
     font-size: 24px;
     line-height: 1.16;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 379px) {
+  .contact-mail {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .contact-tel {
     font-size: 34px;
     line-height: 1.17;
     color: #2196f3;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 379px) {
+  .contact-tel {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .icon-mail,
   .icon-smartphone {
     display: none;
@@ -1131,11 +1143,13 @@ p {
 }
 
 .clients {
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .clients {
+    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
@@ -1240,6 +1254,13 @@ p {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .postaddress {
+    margin-bottom: 9px;
+    text-align: start;
+  }
+}
+
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition-property: color;
@@ -1267,6 +1288,14 @@ p {
           align-items: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-contact {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
 .footer-link:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -1278,8 +1307,13 @@ p {
 
 .footer-socnetwork .subtitle {
   margin-bottom: 20px;
-  text-align: center;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-socnetwork .subtitle {
+    text-align: center;
+  }
 }
 
 .soc-link {
@@ -1458,9 +1492,6 @@ p {
   }
   .footer-socnetwork {
     margin-left: 70px;
-  }
-  .postaddress {
-    margin-bottom: 9px;
   }
   .footer-link:not(:last-child) {
     margin-bottom: 9px;

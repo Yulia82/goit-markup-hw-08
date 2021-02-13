@@ -18,6 +18,11 @@
 
   text-align: center;
   color: $add-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+    text-align: start;
+  }
 }
 
 .footer-link {
@@ -34,6 +39,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    align-items: stretch;
+  }
 }
 
 .footer-link:not(:last-child) {
@@ -46,10 +55,11 @@
 
   & .subtitle {
     margin-bottom: 20px;
-    // margin-top: 0px;
-
-    text-align: center;
     color: $add-text-color;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 }
 
@@ -189,9 +199,10 @@
     margin-left: 70px;
   }
 
-  .postaddress {
-    margin-bottom: 9px;
-  }
+  // .postaddress {
+  //   margin-bottom: 9px;
+  //   text-align: start;
+  // }
 
   .footer-link:not(:last-child) {
     margin-bottom: 9px;
